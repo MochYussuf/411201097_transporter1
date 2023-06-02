@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/kurir', 'API\KurirController@list');
+Route::get('/kurir/{id}', 'API\KurirController@getById');
+Route::post('/kurir', 'API\KurirController@create');
+Route::put('/kurir', 'API\KurirController@update');
+Route::delete('/kurir/{id}', 'API\KurirController@delete');
+
