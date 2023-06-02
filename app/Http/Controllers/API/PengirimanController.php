@@ -51,9 +51,3 @@ class PengirimanController extends Controller
         }
         return response()->json($result, 201);
     }
-    public function status($id)
-    {
-        $detail = Pengiriman::find($id);
-        return response()->json($detail, 200);
-    }
-}
